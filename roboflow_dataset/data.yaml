@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 9
+names: ['Blue', 'Blue_green', 'black', 'brown', 'orange', 'pink', 'red', 'white', 'yellow']
+
+roboflow:
+  workspace: colony-ymeht
+  project: colony-k9j8a
+  version: 2
+  license: MIT
+  url: https://universe.roboflow.com/colony-ymeht/colony-k9j8a/dataset/2

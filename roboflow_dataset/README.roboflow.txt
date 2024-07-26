@@ -1,8 +1,8 @@
 
-colony - v2 2024-07-25 4:51am
+colony - v5 2024-07-26 12:52am
 ==============================
 
-This dataset was exported via roboflow.com on July 25, 2024 at 4:52 AM GMT
+This dataset was exported via roboflow.com on July 26, 2024 at 12:53 AM GMT
 
 Roboflow is an end-to-end computer vision platform that helps you
 * collaborate with your team on computer vision projects
@@ -17,10 +17,12 @@ visit https://github.com/roboflow/notebooks
 
 To find over 100k other datasets and pre-trained models, visit https://universe.roboflow.com
 
-The dataset includes 1592 images.
+The dataset includes 1602 images.
 Colony are annotated in YOLOv8 format.
 
 The following pre-processing was applied to each image:
+* Auto-orientation of pixel data (with EXIF-orientation stripping)
+* Resize to 100x100 (Stretch)
 
 The following augmentation was applied to create 3 versions of each source image:
 * Random Gaussian blur of between 0 and 2.5 pixels

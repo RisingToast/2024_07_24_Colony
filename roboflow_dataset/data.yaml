@@ -8,6 +8,6 @@ names: ['Blue', 'Blue_green', 'black', 'brown', 'orange', 'pink', 'red', 'white'
 roboflow:
   workspace: colony-ymeht
   project: colony-k9j8a
-  version: 2
+  version: 5
   license: MIT
-  url: https://universe.roboflow.com/colony-ymeht/colony-k9j8a/dataset/2
+  url: https://universe.roboflow.com/colony-ymeht/colony-k9j8a/dataset/5

@@ -4,7 +4,7 @@ from matplotlib import pyplot as plt
 from ultralytics import YOLO
 
 # 학습된 모델 로드
-model = YOLO('C:/kkt/2024_07_24_Colony/save_model/train_150_300_16_500.pt')
+model = YOLO('C:/kkt/2024_07_24_Colony/runs/detect/train/weights/best.pt')
 
 # 이미지 예측
 results = model.predict(source='C:/kkt/2024_07_24_Colony/IMG2/', save=True)
@@ -13,12 +13,15 @@ results = model.predict(source='C:/kkt/2024_07_24_Colony/IMG2/', save=True)
 print(results)
 
 # 바운딩 박스 개수 세기 및 이미지 저장
-output_dir = 'C:/kkt/2024_07_24_Colony/img_set/'
+output_dir = 'C:/kkt/2024_07_24_Colony/predict_img_saved/Img_train_100_32_best'
 os.makedirs(output_dir, exist_ok=True)
+
+counter = 1
 
 for result in results:
     count = len(result.boxes)  # 각 이미지에서 바운딩 박스의 수 세기
-    print(f'예측된 바운딩 박스의 개수: {count}')
+    print(f'{counter}번째 사진의 예측된 바운딩 박스의 개수: {count}')
+    counter += 1
     
     # 원본 이미지 로드
     image_path = result.path
@@ -32,5 +35,8 @@ for result in results:
     # 이미지 저장 (OpenCV BGR을 Matplotlib RGB로 변환)
     save_path = os.path.join(output_dir, os.path.basename(image_path))
     plt.imsave(save_path, cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
+    
+    
+    
 
-print("바운딩 박스가 그려진 이미지를 저장했습니다.")
+print("모든 이미지를 저장했습니다.")

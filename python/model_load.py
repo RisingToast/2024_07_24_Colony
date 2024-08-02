@@ -4,7 +4,7 @@ from matplotlib import pyplot as plt
 from ultralytics import YOLO
 
 # 학습된 모델 로드
-model = YOLO('C:/kkt/2024_07_24_Colony/runs/detect/train14_50_300_16/weights/best.pt')
+model = YOLO('C:/kkt/2024_07_24_Colony/save_model/train_100_300_16_500.pt')
 
 # 이미지 예측
 results = model.predict(source='C:/kkt/2024_07_24_Colony/IMG2/', save=True)
@@ -13,7 +13,7 @@ results = model.predict(source='C:/kkt/2024_07_24_Colony/IMG2/', save=True)
 print(results)
 
 # 바운딩 박스 개수 세기 및 이미지 저장
-output_dir = 'C:/kkt/2024_07_24_Colony/predict_img_saved/Img_train_50_16_best'
+output_dir = 'C:/kkt/2024_07_24_Colony/predict_img_saved/Img_train_100_16'
 os.makedirs(output_dir, exist_ok=True)
 
 counter = 1

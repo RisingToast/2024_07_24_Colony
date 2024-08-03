@@ -15,7 +15,7 @@ import pandas as pd
 # lr/pg0, lr/pg1, lr/pg2: 각 파라미터 그룹의 학습률
 
 # Load the CSV file
-file_path = 'C:/kkt/2024_07_24_Colony/runs/detect/train_100_300_16/results.csv'
+file_path = 'D:/git_colony/2024_07_24_Colony/runs/detect/train_50_300_32/results.csv'
 results_df = pd.read_csv(file_path)
 
 # Strip whitespace from column names

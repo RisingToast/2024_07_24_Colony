@@ -4,16 +4,16 @@ from matplotlib import pyplot as plt
 from ultralytics import YOLO
 
 # 학습된 모델 로드
-model = YOLO('C:/kkt/2024_07_24_Colony/save_model/train_100_300_32_512.pt')
+model = YOLO('D:/git_colony/2024_07_24_Colony/save_model/train_50_300_32_512.pt')
 
 # 이미지 예측
-results = model.predict(source='C:/kkt/2024_07_24_Colony/IMG_ppt/', save=True)
+results = model.predict(source='D:/git_colony/2024_07_24_Colony/IMG_ppt', save=True)
 
 # 예측 결과 확인
 print(results)
 
 # 바운딩 박스 개수 세기 및 이미지 저장
-output_dir = 'C:/kkt/2024_07_24_Colony/predict_img_saved/Img_train_100_32_ppt'
+output_dir = 'D:/git_colony/2024_07_24_Colony/runs/detect/predict_50_32_ppt'
 os.makedirs(output_dir, exist_ok=True)
 
 counter = 1
